@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF8F9"
+    tools:context=".view.Shopfragment">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF8F9"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:ems="10"
+                    android:background="@drawable/edit_background"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:inputType="text"
+                    android:drawableStart="@drawable/oi_magnifying_glass"
+                    android:drawablePadding="10dp"
+                    android:padding="5dp"
+                    android:hint="SEARCH.."
+                    android:textColorHint="#ababab"
+                    android:textColor="#000000"
+                    />
+                <ViewFlipper
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/viewflipper">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_1"
+                        android:id="@+id/hinhnen1"
+                        />
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hinh_2"
+                        android:id="@+id/hinhnen2"
+                        />
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hinh_3"
+                        android:id="@+id/hinhnen3"
+                        />
+                </ViewFlipper>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerview"
+                android:layout_marginBottom="60dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:listitem="@layout/show_row">
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
